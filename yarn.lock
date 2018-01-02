@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@sailshq/lodash@^3.10.2":
+  version "3.10.2"
+  resolved "https://registry.yarnpkg.com/@sailshq/lodash/-/lodash-3.10.2.tgz#1567d47345364c2c2e2077bc113487b1dfe62154"
+
 accepts@~1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.4.tgz#86246758c7dd6d21a6474ff084a4740ec05eb21f"
@@ -9,15 +13,36 @@ accepts@~1.3.4:
     mime-types "~2.1.16"
     negotiator "0.6.1"
 
+anchor@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/anchor/-/anchor-1.2.0.tgz#e22e6e80dd430c3c5a015a956e54e2e974bc7cea"
+  dependencies:
+    "@sailshq/lodash" "^3.10.2"
+    validator "4.4.0"
+
 array-flatten@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
+
+async@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.0.1.tgz#b709cc0280a9c36f09f4536be823c838a9049e25"
+  dependencies:
+    lodash "^4.8.0"
+
+balanced-match@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
 basic-auth@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-2.0.0.tgz#015db3f353e02e56377755f962742e8981e7bbba"
   dependencies:
     safe-buffer "5.1.1"
+
+bluebird@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.2.1.tgz#3cecf3504904c30ce3e79c170877e893a11910fd"
 
 body-parser@1.18.2:
   version "1.18.2"
@@ -34,6 +59,13 @@ body-parser@1.18.2:
     raw-body "2.3.2"
     type-is "~1.6.15"
 
+brace-expansion@^1.1.7:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.8.tgz#c07b211c7c952ec1f8efd51a77ef0d1d3990a292"
+  dependencies:
+    balanced-match "^1.0.0"
+    concat-map "0.0.1"
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -48,6 +80,10 @@ cluster@0.7.7:
   dependencies:
     log ">= 1.2.0"
     mkdirp ">= 0.0.1"
+
+concat-map@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
 content-disposition@0.5.2:
   version "0.5.2"
@@ -116,6 +152,12 @@ encodeurl@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.1.tgz#79e3d58655346909fe6f0f45a5de68103b294d20"
 
+encrypted-attr@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/encrypted-attr/-/encrypted-attr-1.0.6.tgz#5b9f81a9308ebe99dbe9cdd84523c8fdabb6f95e"
+  dependencies:
+    lodash "^4.17.4"
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -179,6 +221,12 @@ finalhandler@1.1.0:
     statuses "~1.3.1"
     unpipe "~1.0.0"
 
+flaverr@^1.1.1, flaverr@^1.2.1, flaverr@^1.5.1, flaverr@^1.8.1:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/flaverr/-/flaverr-1.9.0.tgz#205aeda8ea87c436d461cd7748b80ac7acf12bcf"
+  dependencies:
+    "@sailshq/lodash" "^3.10.2"
+
 forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
@@ -190,6 +238,35 @@ frameguard@3.0.0:
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
+
+fs-extra@0.30.0:
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.30.0.tgz#f233ffcc08d4da7d432daa449776989db1df93f0"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^2.1.0"
+    klaw "^1.0.0"
+    path-is-absolute "^1.0.0"
+    rimraf "^2.2.8"
+
+fs.realpath@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
+
+glob@^7.0.5:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.4"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
+graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
 helmet-csp@2.6.0:
   version "2.6.0"
@@ -247,7 +324,14 @@ ienoopen@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ienoopen/-/ienoopen-1.0.0.tgz#346a428f474aac8f50cf3784ea2d0f16f62bda6b"
 
-inherits@2.0.3:
+inflight@^1.0.4:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
+  dependencies:
+    once "^1.3.0"
+    wrappy "1"
+
+inherits@2, inherits@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
@@ -255,9 +339,29 @@ ipaddr.js@1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.5.2.tgz#d4b505bde9946987ccf0fc58d9010ff9607e3fa0"
 
+jsonfile@^2.1.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
+  optionalDependencies:
+    graceful-fs "^4.1.6"
+
+klaw@^1.0.0:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/klaw/-/klaw-1.3.1.tgz#4088433b46b3b1ba259d78785d8e96f73ba02439"
+  optionalDependencies:
+    graceful-fs "^4.1.9"
+
+lodash.issafeinteger@4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/lodash.issafeinteger/-/lodash.issafeinteger-4.0.4.tgz#b176d5990ec649d06bedcbce2f028e7890494f90"
+
 lodash.reduce@4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.reduce/-/lodash.reduce-4.6.0.tgz#f1ab6b839299ad48f784abbf476596f03b914d3b"
+
+lodash@^4.17.4, lodash@^4.8.0:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
 "log@>= 1.2.0":
   version "1.4.0"
@@ -288,6 +392,12 @@ mime-types@~2.1.15, mime-types@~2.1.16:
 mime@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
+
+minimatch@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
+  dependencies:
+    brace-expansion "^1.1.7"
 
 minimist@0.0.8:
   version "0.0.8"
@@ -335,9 +445,27 @@ on-headers@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.1.tgz#928f5d0f470d49342651ea6794b0857c100693f7"
 
+once@^1.3.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
+  dependencies:
+    wrappy "1"
+
+parley@^3.0.0-0:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/parley/-/parley-3.3.4.tgz#1769bbdaa79f2b2cc659b3f8810f0b24ba48591b"
+  dependencies:
+    "@sailshq/lodash" "^3.10.2"
+    bluebird "3.2.1"
+    flaverr "^1.5.1"
+
 parseurl@~1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
+
+path-is-absolute@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
 
 path-to-regexp@0.1.7:
   version "0.1.7"
@@ -374,6 +502,18 @@ raw-body@2.3.2:
 referrer-policy@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/referrer-policy/-/referrer-policy-1.1.0.tgz#35774eb735bf50fb6c078e83334b472350207d79"
+
+rimraf@^2.2.8:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
+  dependencies:
+    glob "^7.0.5"
+
+rttc@^10.0.0-1:
+  version "10.0.0-4"
+  resolved "https://registry.yarnpkg.com/rttc/-/rttc-10.0.0-4.tgz#88182df8137c279df968a11dc478124c1d8b6189"
+  dependencies:
+    "@sailshq/lodash" "^3.10.2"
 
 safe-buffer@5.1.1:
   version "5.1.1"
@@ -433,9 +573,49 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
 
+validator@4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-4.4.0.tgz#35e29555dd5f7826f970a4eaecff9e6df6df3da6"
+
 vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
+
+waterline-schema@^1.0.0-20:
+  version "1.0.0-25"
+  resolved "https://registry.yarnpkg.com/waterline-schema/-/waterline-schema-1.0.0-25.tgz#05c1615475d6d86fd3b150719c8bf224eac4f32d"
+  dependencies:
+    "@sailshq/lodash" "^3.10.2"
+    flaverr "^1.8.1"
+    rttc "^10.0.0-1"
+
+waterline-utils@^1.3.7:
+  version "1.3.23"
+  resolved "https://registry.yarnpkg.com/waterline-utils/-/waterline-utils-1.3.23.tgz#990f3271a36c769954b5ab3144dc63ea10ee7726"
+  dependencies:
+    "@sailshq/lodash" "^3.10.2"
+    async "2.0.1"
+    flaverr "^1.1.1"
+    fs-extra "0.30.0"
+
+waterline@0.13.1-9:
+  version "0.13.1-9"
+  resolved "https://registry.yarnpkg.com/waterline/-/waterline-0.13.1-9.tgz#b135c5bffdc99d94d6239d12729f2813275c2889"
+  dependencies:
+    "@sailshq/lodash" "^3.10.2"
+    anchor "^1.1.0"
+    async "2.0.1"
+    encrypted-attr "1.0.6"
+    flaverr "^1.2.1"
+    lodash.issafeinteger "4.0.4"
+    parley "^3.0.0-0"
+    rttc "^10.0.0-1"
+    waterline-schema "^1.0.0-20"
+    waterline-utils "^1.3.7"
+
+wrappy@1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
 x-xss-protection@1.0.0:
   version "1.0.0"
