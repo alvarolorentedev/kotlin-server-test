@@ -1,6 +1,6 @@
 const Waterline = require('waterline')
 
-const Framework = Waterline.Collection.extend({
+const user = Waterline.Collection.extend({
   identity: 'framework',
   connection: 'default',
   attributes: {
@@ -8,4 +8,4 @@ const Framework = Waterline.Collection.extend({
   }
 })
 
-module.exports = Framework
+module.exports = user
