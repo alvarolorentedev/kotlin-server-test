@@ -1,0 +1,46 @@
+{
+  "name": "blindly-server",
+  "description": "server side for the blindly app",
+  "private": true,
+  "version": "0.0.1",
+  "repository": "git@github.com:kanekotic/blindly-server.git",
+  "author": "kanekotic <alvarojosepl@gmail.com>",
+  "license": "UNLICENSED",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "scripts": {
+    "start": " node .",
+    "start:dev": "NODE_ENV=development nodemon .",
+    "start:prod": "node src/cluster.js",
+    "test": "jest",
+    "test:dev": "jest --watchAll",
+    "test:cov": "jest --coverage"
+  },
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "cluster": "0.7.7",
+    "cors": "2.8.4",
+    "express": "4.16.2",
+    "express-exception-handler": "0.0.7",
+    "helmet": "3.9.0",
+    "morgan": "1.9.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*-test.js"
+    ],
+    "testResultsProcessor": "./node_modules/jest-junit",
+    "coverageDirectory": "shippable/codecoverage",
+    "coverageReporters": [
+      "text",
+      "cobertura"
+    ],
+    "testEnvironment": "node",
+    "automock": false
+  },
+  "jest-junit": {
+    "output": "shippable/testresults/test.xml"
+  }
+}
