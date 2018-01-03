@@ -1,6 +1,6 @@
-const Waterline = require('waterline')
+const waterline = require('waterline')
 
-const user = Waterline.Collection.extend({
+const user = waterline.Collection.extend({
   identity: 'user',
   connection: 'default',
   attributes: {

@@ -1,10 +1,10 @@
 const Waterline = require('waterline')
-const config = require('./db-config.js')
-const Framework = require('./framework-model.js')
+const config = require('../database/config.js')
+const user = require('../database/user-model.js')
 const waterline = new Waterline()
 
 function dbInitialize(app){
-    waterline.loadCollection(Framework)
+    waterline.loadCollection(user)
     waterline.initialize(config, function(err, models) {
       if(err)
         throw err
