@@ -5,7 +5,7 @@ jest.mock('waterline', () => ({
 const user = require('../../src/database/user-model'),
       waterline = require('waterline')
 
-    describe('Test user model for sails', () => {
+describe('Test user model for sails', () => {
 
     test('should be called once to register', async () => {
         expect(waterline.Collection.extend.mock.calls.length).toBe(1)

@@ -1,7 +1,6 @@
-const Waterline = require('waterline')
+const waterline = require('waterline')()
 const config = require('../database/config.js')
 const user = require('../database/user-model.js')
-const waterline = new Waterline()
 
 function dbInitialize(app){
     waterline.loadCollection(user)
