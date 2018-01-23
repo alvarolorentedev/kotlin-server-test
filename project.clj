@@ -6,5 +6,7 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [ring/ring-core "1.6.3"]
                  [ring/ring-jetty-adapter "1.6.3"]
-                 [ring/ring-mock "0.3.2"]]
+                 [ring/ring-mock "0.3.2"]
+                 [liberator "0.15.1"]
+                 [compojure "1.6.0"]]
   :main blindly-server.main)
