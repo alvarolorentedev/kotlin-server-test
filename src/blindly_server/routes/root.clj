@@ -1,4 +1,4 @@
-(ns blindly-server.core)
+(ns blindly-server.routes.root (:gen-class))
 
 (defn handler [request]
   {:status 200
