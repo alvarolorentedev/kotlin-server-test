@@ -1,5 +1,10 @@
 (ns blindly-server.main (:gen-class)
-  (:use [ring.adapter.jetty :refer :all]
-            [blindly-server.routes.root :refer :all]))
+  (:use [compojure.core  :refer :all]
+        [ring.adapter.jetty :refer :all]
+        [blindly-server.routes.root :refer :all])
+  (:require [compojure.handler :as handler]))
 
-(run-jetty handler {:port 3000})
+(def app
+  (handler/site app-routes))
+
+(run-jetty app {:port 3001})

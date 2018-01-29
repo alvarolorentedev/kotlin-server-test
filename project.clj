@@ -8,5 +8,7 @@
                  [ring/ring-jetty-adapter "1.6.3"]
                  [ring/ring-mock "0.3.2"]
                  [liberator "0.15.1"]
-                 [compojure "1.6.0"]]
+                 [compojure "1.6.0"]
+                 [mockery "0.1.2"]
+                 [clojurewerkz/ogre "3.3.0.0"]]
   :main blindly-server.main)

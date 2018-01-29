@@ -4,7 +4,7 @@
             [ring.mock.request :as mock]))
 
 (deftest root-returns-correct-values
-  (is (= (handler (mock/request :get "/"))
+  (is (= (app-routes (mock/request :get "/"))
          {:status  200
-          :headers {"Content-Type" "text/html"}
+          :headers {"Content-Type" "text/html; charset=utf-8"}
           :body    "Hello World"})))

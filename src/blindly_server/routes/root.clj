@@ -1,6 +1,7 @@
-(ns blindly-server.routes.root (:gen-class))
+(ns blindly-server.routes.root
+    (:require [compojure.core :refer :all]
+              [compojure.route :as route])
+    (:gen-class))
 
-(defn handler [request]
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body "Hello World"})
+(defroutes app-routes
+           (GET "/" [] "Hello World"))
