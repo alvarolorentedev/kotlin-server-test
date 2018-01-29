@@ -5,6 +5,7 @@
 
 (deftest root-returns-correct-values
   (is (= (app-routes (mock/request :get "/"))
-         {:status  200
-          :headers {"Content-Type" "text/html; charset=utf-8"}
-          :body    "Hello World"})))
+         {:body    "Hello World"
+          :headers {"Content-Type" "text/plain;charset=UTF-8"
+                    "Vary"         "Accept"}
+          :status  200})))
