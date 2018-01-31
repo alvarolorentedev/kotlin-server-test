@@ -7,5 +7,5 @@
   (is (= (app-routes (mock/request :get "/"))
          {:body    "Hello World"
           :headers {"Content-Type" "text/plain;charset=UTF-8"
-                    "Vary"         "Accept"}
+                    "Vary" "Accept"}
           :status  200})))

@@ -7,7 +7,8 @@
 
 (defresource root [txt]
              :available-media-types ["text/plain"]
-             :handle-ok (fn [_] (format "%s" txt)))
+             :handle-ok (fn [_] (format "%s" txt))
+             )
 
 (defroutes app-routes
            (GET "/" [] (root "Hello World")))
