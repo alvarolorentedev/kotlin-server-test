@@ -1,0 +1,3 @@
+rootProject.name = 'blindly.server'
+rootProject.buildFileName = 'build.gradle.kts'
+
