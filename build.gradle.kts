@@ -26,10 +26,17 @@ val kotlin_version: String by extra
 
 repositories {
     mavenCentral()
+    jcenter()
+    maven { url = uri("https://dl.bintray.com/kotlin/kotlinx") }
+    maven { url= uri("https://dl.bintray.com/kotlin/ktor") }
 }
 
 dependencies {
     compile(kotlinModule("stdlib-jdk8", kotlin_version))
+    compile("org.koin","koin-core","0.8.2")
+    compile("io.vertx","vertx-web-client","3.5.0")
+    compile("io.ktor","ktor-server-netty","0.9.1")
+    compile("ch.qos.logback","logback-classic","1.2.1")
     testCompile("junit", "junit", "4.12")
 }
 
