@@ -6,10 +6,11 @@ import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import io.ktor.server.netty.NettyApplicationEngine
 
 class Server {
     fun start(){
-        val server = embeddedServer(Netty, 8080) {
+        val server: NettyApplicationEngine = embeddedServer(Netty, 8080) {
             routing {
                 get("/") {
                     call.respondText("Hello Blindly")
